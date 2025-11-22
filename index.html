@@ -11,10 +11,9 @@
         overflow: hidden;
         background-color: #050505;
         color: #d4d4d4;
-        font-family: 'Cinzel', serif; /* Use a fantasy-style font if available, fallback to serif */
+        font-family: 'Cinzel', serif;
         user-select: none;
       }
-      /* Custom scrollbar for game UI if needed */
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -29,21 +28,25 @@
       }
       canvas {
         display: block;
-        touch-action: none; /* Prevent browser zooming/scrolling on mobile */
+        touch-action: none;
       }
       @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
     </style>
   <script type="importmap">
 {
   "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+    "vite": "https://aistudiocdn.com/vite@^7.2.4"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <!-- This script tag allows Vite to bundle the React application -->
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
